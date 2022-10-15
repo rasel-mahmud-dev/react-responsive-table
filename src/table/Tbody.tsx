@@ -23,7 +23,7 @@ const Tbody: FC<Props> = (props) => {
 						>
 							{col.render
 								? col.render(data)
-								: data[col.dataIndex]}
+								: data[col.dataIndex as any]}
 						</td>
 					))}
 				</tr>

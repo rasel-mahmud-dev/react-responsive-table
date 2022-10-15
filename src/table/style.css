@@ -19,6 +19,11 @@
     padding: 10px;
 }
 
+.rsl-table thead .thead-item{
+    display: flex;
+    align-items: center;
+}
+
 .table-fixed {
     max-height: 300px;
     overflow: auto;

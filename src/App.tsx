@@ -14,10 +14,8 @@ function App() {
     {
       title: 'Title',
       dataIndex: 'title',
-      sorter: {
-        compare: (a: any, b: any) => {
-          return a > b ? 1 : a < b ? -1 : 0;
-        },
+      sorter: (a: any, b: any) => {
+        return a > b ? 1 : a < b ? -1 : 0;
       },
     },
     {
@@ -31,6 +29,9 @@ function App() {
     {
       title: 'Price',
       dataIndex: 'price',
+      sorter: (a: any, b: any) => {
+        return a > b ? 1 : a < b ? -1 : 0;
+      },
     },
     {
       title: 'Stock',
