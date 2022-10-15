@@ -46,12 +46,13 @@ const Table: FC<TableProps> = (props) => {
         sortedField: "",
         currentPage: 1,
         pageSize: 100,
+        pages: [],
     });
 
     useEffect(() => {
         setState((prevState) => {
             let list = dataSource;
-
+            let pages: any = [];
             if (pagination) {
                 list = sliceForPaginate(
                     {
@@ -60,6 +61,7 @@ const Table: FC<TableProps> = (props) => {
                     },
                     list
                 );
+                pages = getForwardPage(dataSource, pagination.pageSize, pagination.currentPage);
             }
 
             return {
@@ -67,6 +69,7 @@ const Table: FC<TableProps> = (props) => {
                 items: dataSource,
                 paginatedItems: list,
                 order: 1,
+                pages: pages,
                 currentPage: pagination.currentPage,
                 pageSize: pagination.pageSize,
             };
@@ -81,16 +84,19 @@ const Table: FC<TableProps> = (props) => {
     }
 
     function handleSort(compareFn: (args1: any, args2: any) => void, column: any) {
-        let list = dataSource;
+        let list: any = state.items;
         if (state.order) {
             list = list.sort((a: any, b: any) => compareFn(a[column.dataIndex], b[column.dataIndex]));
         } else {
             list = list.sort((a: any, b: any) => compareFn(b[column.dataIndex], a[column.dataIndex]));
         }
 
+        let paginatedItems = sliceForPaginate(state, state.items);
+
         setState((prevState) => ({
             ...prevState,
             items: list,
+            paginatedItems,
             sortedField: column.dataIndex,
             order: prevState.order ? 0 : 1,
         }));
@@ -109,11 +115,39 @@ const Table: FC<TableProps> = (props) => {
             state.items
         );
 
-        setState((prevState) => ({
-            ...prevState,
-            currentPage: pageNumber,
-            paginatedItems: list,
-        }));
+        setState((prevState: any) => {
+            let isZero = pageNumber % 5;
+            let pages: number[] = prevState.pages;
+            let allPages = prevState.items.slice(0, prevState.items.length / prevState.pageSize);
+
+            if (isZero === 0) {
+                pages = [];
+                pages.push(pageNumber - 1);
+                for (let i = 0; i <= 5; i++) {
+                    pages.push(pageNumber + i);
+                }
+                pages.push(allPages.length);
+            } else if (pageNumber === pages[0]) {
+                pages = pages.map((item) => item - 1);
+            }
+
+            return {
+                ...prevState,
+                pages,
+                currentPage: pageNumber,
+                paginatedItems: list,
+            };
+        });
+    }
+
+    function getForwardPage(items: any, pageSize: number, currentPage: number) {
+        let allPage: number[] = [];
+        let pages = items.slice(0, items.length / pageSize);
+        for (let i = 0; i < 5; i++) {
+            allPage.push(i + 1);
+        }
+        allPage.push(pages.length);
+        return allPage;
     }
 
     return (
@@ -138,15 +172,15 @@ const Table: FC<TableProps> = (props) => {
                 </table>
             </div>
 
-            <div className="flex items-center flex-wrap ">
-                {state.items.slice(0, state.items.length / state.pageSize).map((_, index) => (
+            <div className="flex items-center flex-wrap mt-5 justify-end ">
+                {state.pages.map((pageNumber) => (
                     <div
-                        className={`bg-gray-100 rounded-full font-medium m-2 w-12 h-12 flex justify-center text-center items-center cursor-pointer ${
-                            state.currentPage === index + 1 ? "!bg-amber-400" : ""
+                        className={`bg-gray-100 rounded-full font-medium m-2 w-10 h-10 flex justify-center text-center items-center cursor-pointer ${
+                            state.currentPage === pageNumber ? "!bg-amber-400" : ""
                         }`}
-                        onClick={() => handleSelectPage(index + 1)}
+                        onClick={() => handleSelectPage(pageNumber)}
                     >
-                        <button>{index + 1}</button>
+                        <button>{pageNumber}</button>
                     </div>
                 ))}
             </div>
