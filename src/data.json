@@ -1,0 +1,437 @@
+[
+  {
+    "_id": "60e03983c4db28a6a4fdcb80",
+    "qty": 2,
+    "sold": 5,
+    "views": 8,
+    "title": "MSI Z61 PRO SATA3&USB3.1/ M.2/ A&GbE/MicroATX Motherboard Motherboard",
+    "categoryId": "60df5e546419f56b97610608",
+    "price": 4004,
+    "brandId": "60e05bc6c4db28a6a4fdcb89",
+    "createdAt": "2011-08-04T11:55:16.887Z",
+    "attributes": {
+      "discount": "50",
+      "generation": 9,
+      "form_factor": "mini_itx",
+      "processor_type": "intel"
+    },
+    "coverPhoto": "images/products/zebronics-zebronics-h61-board-intel-core-i3-cpu-3220-3mb-cache-3-original-imaewhqm5xexwsxm.jpeg",
+    "discount": 10,
+    "images": [
+      "images/products/zebronics-zebronics-h61-board-intel-core-i3-cpu-3220-3mb-cache-3-original-imaewhqm5xexwsxm.jpeg"
+    ],
+    "updatedAt": "2021-10-20T13:47:59.206Z",
+    "sellerId": "6165b0ecd28d389c0a4dbc57"
+  },
+  {
+    "_id": "60e05a61c4db28a6a4fdcb86",
+    "qty": 1,
+    "sold": 1,
+    "views": 3,
+    "title": "Gigabyte h310m vdh",
+    "categoryId": "60df5e546419f56b97610608",
+    "price": 23.23,
+    "discount": 10,
+    "brandId": "60e05bc6c4db28a6a4fdcb89",
+    "attributes": {
+      "generation": 9,
+      "form_factor": "micro_atx",
+      "processor_type": "intel"
+    },
+    "createdAt": "2017-08-04T12:04:55.090Z",
+    "coverPhoto": "images/products/h81m-vg4-r4-asrock-original-imag4yfgyx5pdxew.jpeg",
+    "sellerId": "631650c5cecbcd936cef6c7e"
+  },
+  {
+    "_id": "60e05a66c4db28a6a4fdcb87",
+    "qty": 1,
+    "sold": 1,
+    "views": 1,
+    "discount": 10,
+    "title": "Gigabyte Z390M Mini ITX Wifi",
+    "categoryId": "60df5e546419f56b97610608",
+    "price": 333.23,
+    "brandId": "60e05bc6c4db28a6a4fdcb89",
+    "attributes": {
+      "discount": 12,
+      "generation": 9,
+      "form_factor": "mini_atx",
+      "processor_type": "amd"
+    },
+    "createdAt": "2010-08-04T12:05:33.192Z",
+    "coverPhoto": "images/products/h81m-vg4-r4-asrock-original-imag4yfgyx5pdxew.jpeg",
+    "sellerId": "631650c5cecbcd936cef6c7f"
+  },
+  {
+    "_id": "60e05520c4db28a6a4fdcb84",
+    "qty": 5,
+    "sold": 1,
+    "views": 2,
+    "title": "MSI H61DH3 updated",
+    "categoryId": "60df5e546419f56b97610608",
+    "price": 4000,
+    "brandId": "61702049ed596803892403ef",
+    "createdAt": "2020-08-04T11:56:52.294Z",
+    "attributes": {
+      "discount": 50,
+      "generation": 2,
+      "form_factor": "itx",
+      "processor_type": "intel"
+    },
+    "coverPhoto": "images/products/zebronics-zebronics-zeb-h61-original-imafdf8ujpfaxmsf.jpeg",
+    "discount": 12,
+    "updatedAt": "2021-10-20T14:54:05.260Z",
+    "images": [
+      "images/products/zebronics-zebronics-zeb-h61-original-imafdf8ujpfaxmsf.jpeg"
+    ],
+    "sellerId": "60fd77168e914a4b2cc47ba1"
+  },
+  {
+    "_id": "60e72e1e5cad7521b14751b4",
+    "title": "MSI Z590I Wifi",
+    "qty": "10",
+    "categoryId": "60df5e546419f56b97610608",
+    "brandId": "60e03b7bc4db28a6a4fdcb82",
+    "sold": 0,
+    "views": 0,
+    "discount": 10,
+    "updatedAt": "2010-08-04T12:05:33.192Z",
+    "price": 150000,
+    "coverPhoto": "images/products/asrock-b450m-steel-legend-socket-am4-amd-3rd-generation-ryzen-original-imafzbdaczggzxvv.jpeg",
+    "sellerId": "631650c5cecbcd936cef6c81"
+  },
+  {
+    "_id": "60e05a59c4db28a6a4fdcb85",
+    "qty": 1,
+    "sold": 1,
+    "views": 1,
+    "title": "MSI h310m m2 prop plus",
+    "categoryId": "60df5e546419f56b97610608",
+    "price": 7000.23,
+    "brandId": "60e03b7bc4db28a6a4fdcb82",
+    "attributes": {
+      "discount": 25,
+      "generation": 9,
+      "form_factor": "micro_atx",
+      "processor_type": "intel"
+    },
+    "createdAt": "2020-07-04T12:03:27.275Z",
+    "discount": 10,
+    "coverPhoto": "images/products/zebronics-zebronics-h61-board-intel-core-i3-cpu-3220-3mb-cache-3-original-imaewhqm5xexwsxm.jpeg",
+    "sellerId": "631650c5cecbcd936cef6c7d"
+  },
+  {
+    "_id": "60e9dafc19bf331c9efa438a",
+    "title": "Symphony Inova",
+    "price": 8350,
+    "qty": 2,
+    "categoryId": "60df5e546419f56b97610602",
+    "brandId": "613d2233c9247b736856e2a5",
+    "sold": 0,
+    "discount": 10,
+    "views": 0,
+    "attributes": {
+      "ram": [
+        2
+      ],
+      "internal_storage": [
+        32
+      ],
+      "screen_size": "6.4",
+      "processor_core": "quad-core",
+      "network_type": [
+        "3G",
+        "4G",
+        "5G"
+      ],
+      "os": "Android",
+      "primary_camera": "1,2",
+      "customer_rate": "3,4",
+      "discount": "10,20",
+      "sim_type": "Dual Sim",
+      "processor_brand": "Exynos",
+      "os_version": "Oreo",
+      "clock_speed": "2,2.5",
+      "cpu_core": "8"
+    },
+    "updatedAt": "2022-01-13T13:04:55.574Z",
+    "coverPhoto": "images/products_images/xiaomi-redmi-note-9-pro-global-.jpg",
+    "images": [
+      "images/products_images/xiaomi-redmi-note-9-pro-global-.jpg"
+    ],
+    "sellerId": "61e02377aa72cce1692d0382"
+  },
+  {
+    "_id": "610a82f0dd705124cd575db1",
+    "title": "Corsire 16GB DDR4",
+    "price": 6399,
+    "qty": 2,
+    "categoryId": "60df5e546419f56b9761060a",
+    "brandId": "60e039ffc4db28a6a4fdcb81",
+    "sold": 0,
+    "discount": 10,
+    "views": 0,
+    "updatedAt": "2010-08-04T12:05:33.192Z",
+    "createdAt": "2020-01-04T12:06:59.714Z",
+    "coverPhoto": "images/products/kingston-hx316c10f-8-original-imaexqgdfdbzgpn6.jpeg",
+    "sellerId": "631650c5cecbcd936cef6c83"
+  },
+  {
+    "_id": "613510e9a937c621233341c5",
+    "qty": 11,
+    "sold": 5,
+    "views": 8,
+    "title": "Lenovo Ideapad 3 Athlon Dual Core 3050U - (4 GB/1 TB HDD/Windows",
+    "categoryId": "60df5e546419f56b97610607",
+    "price": 40000,
+    "brandId": "613511bba937c621233341c8",
+    "discount": 10,
+    "createdAt": "2011-08-04T11:55:16.887Z",
+    "attributes": {
+      "discount": "50",
+      "generation": 9,
+      "form_factor": "mini_itx",
+      "processor_type": "intel"
+    },
+    "coverPhoto": "images/computers/lenovo-na-laptop-original-imafuzt8r5jqppfn.jpeg",
+    "sellerId": "631650c5cecbcd936cef6c84"
+  },
+  {
+    "_id": "613512c9a937c621233341cb",
+    "qty": 11,
+    "sold": 5,
+    "discount": 10,
+    "views": 8,
+    "title": "Lenovo IdeaPad 3 Core i3 10th Gen - (8 GB/1 TB HDD/Windows 10 Hom...",
+    "categoryId": "60df5e546419f56b97610607",
+    "price": 41000,
+    "brandId": "613511bba937c621233341c8",
+    "createdAt": "2011-08-04T11:55:16.887Z",
+    "attributes": {
+      "discount": "50",
+      "generation": 9,
+      "form_factor": "mini_itx",
+      "processor_type": "intel"
+    },
+    "coverPhoto": "images/computers/lenovo-na-laptop-original-imafuzt8r5jqppfn.jpeg",
+    "sellerId": "631650c5cecbcd936cef6c85"
+  },
+
+  {
+    "_id": "60e03983c4db28a6a4fdcb80",
+    "qty": 2,
+    "sold": 5,
+    "views": 8,
+    "title": "MSI Z61 PRO SATA3&USB3.1/ M.2/ A&GbE/MicroATX Motherboard Motherboard",
+    "categoryId": "60df5e546419f56b97610608",
+    "price": 4004,
+    "brandId": "60e05bc6c4db28a6a4fdcb89",
+    "createdAt": "2011-08-04T11:55:16.887Z",
+    "attributes": {
+      "discount": "50",
+      "generation": 9,
+      "form_factor": "mini_itx",
+      "processor_type": "intel"
+    },
+    "coverPhoto": "images/products/zebronics-zebronics-h61-board-intel-core-i3-cpu-3220-3mb-cache-3-original-imaewhqm5xexwsxm.jpeg",
+    "discount": 10,
+    "images": [
+      "images/products/zebronics-zebronics-h61-board-intel-core-i3-cpu-3220-3mb-cache-3-original-imaewhqm5xexwsxm.jpeg"
+    ],
+    "updatedAt": "2021-10-20T13:47:59.206Z",
+    "sellerId": "6165b0ecd28d389c0a4dbc57"
+  },
+  {
+    "_id": "60e05a61c4db28a6a4fdcb86",
+    "qty": 1,
+    "sold": 1,
+    "views": 3,
+    "title": "Gigabyte h310m vdh",
+    "categoryId": "60df5e546419f56b97610608",
+    "price": 23.23,
+    "discount": 10,
+    "brandId": "60e05bc6c4db28a6a4fdcb89",
+    "attributes": {
+      "generation": 9,
+      "form_factor": "micro_atx",
+      "processor_type": "intel"
+    },
+    "createdAt": "2017-08-04T12:04:55.090Z",
+    "coverPhoto": "images/products/h81m-vg4-r4-asrock-original-imag4yfgyx5pdxew.jpeg",
+    "sellerId": "631650c5cecbcd936cef6c7e"
+  },
+  {
+    "_id": "60e05a66c4db28a6a4fdcb87",
+    "qty": 1,
+    "sold": 1,
+    "views": 1,
+    "discount": 10,
+    "title": "Gigabyte Z390M Mini ITX Wifi",
+    "categoryId": "60df5e546419f56b97610608",
+    "price": 333.23,
+    "brandId": "60e05bc6c4db28a6a4fdcb89",
+    "attributes": {
+      "discount": 12,
+      "generation": 9,
+      "form_factor": "mini_atx",
+      "processor_type": "amd"
+    },
+    "createdAt": "2010-08-04T12:05:33.192Z",
+    "coverPhoto": "images/products/h81m-vg4-r4-asrock-original-imag4yfgyx5pdxew.jpeg",
+    "sellerId": "631650c5cecbcd936cef6c7f"
+  },
+  {
+    "_id": "60e05520c4db28a6a4fdcb84",
+    "qty": 5,
+    "sold": 1,
+    "views": 2,
+    "title": "MSI H61DH3 updated",
+    "categoryId": "60df5e546419f56b97610608",
+    "price": 4000,
+    "brandId": "61702049ed596803892403ef",
+    "createdAt": "2020-08-04T11:56:52.294Z",
+    "attributes": {
+      "discount": 50,
+      "generation": 2,
+      "form_factor": "itx",
+      "processor_type": "intel"
+    },
+    "coverPhoto": "images/products/zebronics-zebronics-zeb-h61-original-imafdf8ujpfaxmsf.jpeg",
+    "discount": 12,
+    "updatedAt": "2021-10-20T14:54:05.260Z",
+    "images": [
+      "images/products/zebronics-zebronics-zeb-h61-original-imafdf8ujpfaxmsf.jpeg"
+    ],
+    "sellerId": "60fd77168e914a4b2cc47ba1"
+  },
+  {
+    "_id": "60e72e1e5cad7521b14751b4",
+    "title": "MSI Z590I Wifi",
+    "qty": "10",
+    "categoryId": "60df5e546419f56b97610608",
+    "brandId": "60e03b7bc4db28a6a4fdcb82",
+    "sold": 0,
+    "views": 0,
+    "discount": 10,
+    "updatedAt": "2010-08-04T12:05:33.192Z",
+    "price": 150000,
+    "coverPhoto": "images/products/asrock-b450m-steel-legend-socket-am4-amd-3rd-generation-ryzen-original-imafzbdaczggzxvv.jpeg",
+    "sellerId": "631650c5cecbcd936cef6c81"
+  },
+  {
+    "_id": "60e05a59c4db28a6a4fdcb85",
+    "qty": 1,
+    "sold": 1,
+    "views": 1,
+    "title": "MSI h310m m2 prop plus",
+    "categoryId": "60df5e546419f56b97610608",
+    "price": 7000.23,
+    "brandId": "60e03b7bc4db28a6a4fdcb82",
+    "attributes": {
+      "discount": 25,
+      "generation": 9,
+      "form_factor": "micro_atx",
+      "processor_type": "intel"
+    },
+    "createdAt": "2020-07-04T12:03:27.275Z",
+    "discount": 10,
+    "coverPhoto": "images/products/zebronics-zebronics-h61-board-intel-core-i3-cpu-3220-3mb-cache-3-original-imaewhqm5xexwsxm.jpeg",
+    "sellerId": "631650c5cecbcd936cef6c7d"
+  },
+  {
+    "_id": "60e9dafc19bf331c9efa438a",
+    "title": "Symphony Inova",
+    "price": 8350,
+    "qty": 2,
+    "categoryId": "60df5e546419f56b97610602",
+    "brandId": "613d2233c9247b736856e2a5",
+    "sold": 0,
+    "discount": 10,
+    "views": 0,
+    "attributes": {
+      "ram": [
+        2
+      ],
+      "internal_storage": [
+        32
+      ],
+      "screen_size": "6.4",
+      "processor_core": "quad-core",
+      "network_type": [
+        "3G",
+        "4G",
+        "5G"
+      ],
+      "os": "Android",
+      "primary_camera": "1,2",
+      "customer_rate": "3,4",
+      "discount": "10,20",
+      "sim_type": "Dual Sim",
+      "processor_brand": "Exynos",
+      "os_version": "Oreo",
+      "clock_speed": "2,2.5",
+      "cpu_core": "8"
+    },
+    "updatedAt": "2022-01-13T13:04:55.574Z",
+    "coverPhoto": "images/products_images/xiaomi-redmi-note-9-pro-global-.jpg",
+    "images": [
+      "images/products_images/xiaomi-redmi-note-9-pro-global-.jpg"
+    ],
+    "sellerId": "61e02377aa72cce1692d0382"
+  },
+  {
+    "_id": "610a82f0dd705124cd575db1",
+    "title": "Corsire 16GB DDR4",
+    "price": 6399,
+    "qty": 2,
+    "categoryId": "60df5e546419f56b9761060a",
+    "brandId": "60e039ffc4db28a6a4fdcb81",
+    "sold": 0,
+    "discount": 10,
+    "views": 0,
+    "updatedAt": "2010-08-04T12:05:33.192Z",
+    "createdAt": "2020-01-04T12:06:59.714Z",
+    "coverPhoto": "images/products/kingston-hx316c10f-8-original-imaexqgdfdbzgpn6.jpeg",
+    "sellerId": "631650c5cecbcd936cef6c83"
+  },
+  {
+    "_id": "613510e9a937c621233341c5",
+    "qty": 11,
+    "sold": 5,
+    "views": 8,
+    "title": "Lenovo Ideapad 3 Athlon Dual Core 3050U - (4 GB/1 TB HDD/Windows",
+    "categoryId": "60df5e546419f56b97610607",
+    "price": 40000,
+    "brandId": "613511bba937c621233341c8",
+    "discount": 10,
+    "createdAt": "2011-08-04T11:55:16.887Z",
+    "attributes": {
+      "discount": "50",
+      "generation": 9,
+      "form_factor": "mini_itx",
+      "processor_type": "intel"
+    },
+    "coverPhoto": "images/computers/lenovo-na-laptop-original-imafuzt8r5jqppfn.jpeg",
+    "sellerId": "631650c5cecbcd936cef6c84"
+  },
+  {
+    "_id": "613512c9a937c621233341cb",
+    "qty": 11,
+    "sold": 5,
+    "discount": 10,
+    "views": 8,
+    "title": "Lenovo IdeaPad 3 Core i3 10th Gen - (8 GB/1 TB HDD/Windows 10 Hom...",
+    "categoryId": "60df5e546419f56b97610607",
+    "price": 41000,
+    "brandId": "613511bba937c621233341c8",
+    "createdAt": "2011-08-04T11:55:16.887Z",
+    "attributes": {
+      "discount": "50",
+      "generation": 9,
+      "form_factor": "mini_itx",
+      "processor_type": "intel"
+    },
+    "coverPhoto": "images/computers/lenovo-na-laptop-original-imafuzt8r5jqppfn.jpeg",
+    "sellerId": "631650c5cecbcd936cef6c85"
+  }
+]

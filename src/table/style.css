@@ -1,0 +1,63 @@
+.card{
+    background: #ffffff;
+    box-shadow: 0 3px 20px -2px rgba(54, 54, 54, 0.63);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.rsl-table{
+    box-sizing: border-box;
+}
+
+.rsl-table table{
+    width: 100%;
+    box-sizing: border-box;
+    border-spacing: 0;
+}
+
+.rsl-table table tr th{
+    padding: 10px;
+}
+
+.table-fixed {
+    max-height: 300px;
+    overflow: auto;
+}
+
+.table-fixed table {
+
+}
+
+
+.table-fixed tbody {
+
+}
+
+.table-fixed thead tr  {
+    position: sticky !important;
+    top: 0;
+    z-index: 1;
+    background: white;
+}
+
+
+
+.table-fixed tbody::-webkit-scrollbar,
+.rsl-table::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+    overflow: hidden;
+}
+.table-fixed tbody::-webkit-scrollbar-track , .rsl-table::-webkit-scrollbar-track {
+    background: rgba(194, 194, 194, 0.11);
+    border-radius: 10px;
+}
+.table-fixed tbody::-webkit-scrollbar-thumb,
+.rsl-table::-webkit-scrollbar-thumb {
+    background: rgba(66, 206, 114, 0.67);
+    border-radius: 10px;
+}
+
+.table-cell{
+    word-break: break-word;
+}
