@@ -45,16 +45,20 @@ function App() {
   
 
   return (
-    <div className="App p-5">
-      <h1 className="text-3xl my-6 text-center font-bold">App JS</h1>
-      <div className="card">
+    <div className="App p-10">
+      <h1 className="text-3xl my-6 text-center font-bold">Responsive Table</h1>
+      <div className="mt-10">
+        
+        <div className="card">
         <Table
-          className=""
-          fixed={true}
-          dataSource={data ? data : []}
-          scroll={{x: 1000, y: 500}}
-          columns={columns}
+            className=""
+            fixed={true}
+            dataSource={data ? data : []}
+            scroll={{x: 800, y: 350}}
+            columns={columns}
         />
+      </div>
+      
       </div>
     </div>
   );
