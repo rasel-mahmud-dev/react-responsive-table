@@ -116,19 +116,26 @@ const Table: FC<TableProps> = (props) => {
         );
 
         setState((prevState: any) => {
-            let isZero = pageNumber % 5;
+            let isZero = pageNumber % 10;
             let pages: number[] = prevState.pages;
             let allPages = prevState.items.slice(0, prevState.items.length / prevState.pageSize);
 
+            // if click each 10 pair ? 10, 20, 30, 40, 50...
             if (isZero === 0) {
-                pages = [];
-                pages.push(pageNumber - 1);
-                for (let i = 0; i <= 5; i++) {
-                    pages.push(pageNumber + i);
+                // if click last page
+                if (allPages.length === pageNumber) {
+                    pages = getNegativePages(pageNumber);
+                } else {
+                    pages = [];
+                    pages.push(pageNumber - 1);
+                    for (let i = 0; i <= 10; i++) {
+                        pages.push(pageNumber + i);
+                    }
+                    pages.push(allPages.length);
                 }
-                pages.push(allPages.length);
-            } else if (pageNumber === pages[0]) {
-                pages = pages.map((item) => item - 1);
+                // of click blew than current page number
+            } else if (prevState.currentPage > pageNumber && pageNumber > 0) {
+                pages = getNegativePages(prevState.currentPage);
             }
 
             return {
@@ -143,11 +150,34 @@ const Table: FC<TableProps> = (props) => {
     function getForwardPage(items: any, pageSize: number, currentPage: number) {
         let allPage: number[] = [];
         let pages = items.slice(0, items.length / pageSize);
-        for (let i = 0; i < 5; i++) {
+        for (let i = 0; i < 10; i++) {
             allPage.push(i + 1);
         }
         allPage.push(pages.length);
         return allPage;
+    }
+
+    function getNegativePages(n: number) {
+        let result = [];
+        //  store first 10 page
+        if (n === 9) {
+            for (let i = 1; i <= 10; i++) {
+                result.push(i);
+            }
+        } else {
+            //  if current page number 9 than store [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+            //  if current page number 19 than store [10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
+
+            for (let i = 10; i > -1; i--) {
+                let pageReverse = n - i;
+                // ignore 0 and negative
+                if (pageReverse > 0) {
+                    result.push(pageReverse);
+                }
+            }
+        }
+
+        return result;
     }
 
     return (

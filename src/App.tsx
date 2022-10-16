@@ -14,7 +14,7 @@ function App() {
             title: "Title",
             dataIndex: "title",
             sorter: (a: string, b: string) => {
-                return a > b ? 1 : a < b ? -1 : 0;
+                return a.toLowerCase() > b.toLowerCase() ? 1 : a.toLowerCase() < b.toLowerCase() ? -1 : 0;
             },
         },
         {
@@ -35,10 +35,16 @@ function App() {
         {
             title: "Stock",
             dataIndex: "qty",
+            sorter: (a: number, b: number) => {
+                return a > b ? 1 : a < b ? -1 : 0;
+            },
         },
         {
             title: "Sold",
             dataIndex: "sold",
+            sorter: (a: number, b: number) => {
+                return a > b ? 1 : a < b ? -1 : 0;
+            },
         },
     ];
 
