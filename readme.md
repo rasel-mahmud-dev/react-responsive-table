@@ -9,14 +9,14 @@
 Install `rasel-react-table` with [npm](https://www.npmjs.com/):
 
 ```
-$ npm install rasel-react-table
+npm install rasel-react-table
 ```
 
 ## Usage
 
 Very easy to use. Just provide props with columns and dataSource
 
-```typescript jsx
+```jsx
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
 import {Table, Column} from "rasel-react-table";
@@ -98,7 +98,8 @@ const App  = ()=> {
         </div>
         <div className="mt-10">
             <div className="card">
-                <Table
+                <Table 
+                    className="w-full"
                     fixed={true}
                     dataSource={data ? data : []}
                     scroll={{ x: 800, y: 450 }}

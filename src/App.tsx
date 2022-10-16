@@ -79,7 +79,7 @@ function App() {
             <div className="mt-10">
                 <div className="card">
                     <Table
-                        className=""
+                        className="w-full"
                         fixed={true}
                         dataSource={data ? data : []}
                         scroll={{ x: 800, y: 450 }}
