@@ -48,6 +48,11 @@ function App() {
         },
     ];
 
+    const [state, setState] = useState<any>({
+        pageSize: 10,
+        currentPage: 1,
+    });
+
     const data = new Array(1000).fill(1).map((_, index) => ({
         title: "Lenovo IdeaPad 3 Core i3 10th Gen -- " + index,
         qty: index,
@@ -62,6 +67,15 @@ function App() {
     return (
         <div className="App p-4 md:p10">
             <h1 className="text-3xl my-6 text-center font-bold">Responsive Table</h1>
+            <div>
+                <label htmlFor="">Per Page show</label>
+                <input
+                    type="text"
+                    className="border-2 border-amber-400"
+                    placeholder="show items"
+                    onChange={(e) => setState({ ...state, pageSize: e.target.value })}
+                />
+            </div>
             <div className="mt-10">
                 <div className="card">
                     <Table
@@ -70,7 +84,7 @@ function App() {
                         dataSource={data ? data : []}
                         scroll={{ x: 800, y: 450 }}
                         columns={columns}
-                        pagination={{ pageSize: 10, currentPage: 1 }}
+                        pagination={{ pageSize: state.pageSize, currentPage: 1 }}
                     />
                 </div>
             </div>

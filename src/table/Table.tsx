@@ -49,7 +49,7 @@ const Table: FC<TableProps> = (props) => {
         pages: [],
     });
 
-    useEffect(() => {
+    function initialDataSetup() {
         setState((prevState) => {
             let list = dataSource;
             let pages: any = [];
@@ -74,7 +74,15 @@ const Table: FC<TableProps> = (props) => {
                 pageSize: pagination.pageSize,
             };
         });
+    }
+
+    useEffect(() => {
+        initialDataSetup();
     }, []);
+
+    useEffect(() => {
+        initialDataSetup();
+    }, [pagination.pageSize]);
 
     if (scroll && scroll.y) {
         fixedTable.maxHeight = scroll.y;
@@ -116,27 +124,42 @@ const Table: FC<TableProps> = (props) => {
         );
 
         setState((prevState: any) => {
-            let isZero = pageNumber % 10;
+            // let isZero = pageNumber % 10;
+
             let pages: number[] = prevState.pages;
-            let allPages = prevState.items.slice(0, prevState.items.length / prevState.pageSize);
+            // let allPages = prevState.items.slice(0, prevState.items.length / prevState.pageSize);
+
+            // if click last page number
+            if (pages.pop() === pageNumber) {
+                pages = [];
+                for (let i = -1; i < 9; i++) {
+                    pages.push(pageNumber + i);
+                }
+
+                // if click backward page number
+            } else if (prevState.currentPage > pageNumber && pageNumber > 0) {
+                pages = getNegativePages(pageNumber);
+            }
+
+            // console.log(prevState.currentPage > pageNumber);
 
             // if click each 10 pair ? 10, 20, 30, 40, 50...
-            if (isZero === 0) {
-                // if click last page
-                if (allPages.length === pageNumber) {
-                    pages = getNegativePages(pageNumber);
-                } else {
-                    pages = [];
-                    pages.push(pageNumber - 1);
-                    for (let i = 0; i <= 10; i++) {
-                        pages.push(pageNumber + i);
-                    }
-                    pages.push(allPages.length);
-                }
-                // of click blew than current page number
-            } else if (prevState.currentPage > pageNumber && pageNumber > 0) {
-                pages = getNegativePages(prevState.currentPage);
-            }
+            // if (isZero === 0) {
+            //     // if click last page
+            //     if (allPages.length === pageNumber) {
+            //         pages = getNegativePages(pageNumber);
+            //     } else {
+            //         pages = [];
+            //         pages.push(pageNumber - 1);
+            //         for (let i = 0; i <= 10; i++) {
+            //             pages.push(pageNumber + i);
+            //         }
+            //         pages.push(allPages.length);
+            //     }
+            //     // of click blew than current page number
+            // } else if (prevState.currentPage > pageNumber && pageNumber > 0) {
+            //     pages = getNegativePages(prevState.currentPage);
+            // }
 
             return {
                 ...prevState,
@@ -153,14 +176,14 @@ const Table: FC<TableProps> = (props) => {
         for (let i = 0; i < 10; i++) {
             allPage.push(i + 1);
         }
-        allPage.push(pages.length);
+        // allPage.push(pages.length);
         return allPage;
     }
 
     function getNegativePages(n: number) {
         let result = [];
         //  store first 10 page
-        if (n === 9) {
+        if (n === 1) {
             for (let i = 1; i <= 10; i++) {
                 result.push(i);
             }
@@ -169,7 +192,7 @@ const Table: FC<TableProps> = (props) => {
             //  if current page number 19 than store [10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
 
             for (let i = 10; i > -1; i--) {
-                let pageReverse = n - i;
+                let pageReverse = n + 1 - i;
                 // ignore 0 and negative
                 if (pageReverse > 0) {
                     result.push(pageReverse);
