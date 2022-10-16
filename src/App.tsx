@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 // import data from "./data.json";
 
-import Table, { Column } from "./table/Table";
+import { Table, Column } from "./lib";
 
 function App() {
     const columns: Column[] = [
@@ -58,7 +58,7 @@ function App() {
         qty: index,
         sold: index,
         categoryId: "60df5e546419f56b97610607",
-        price: 410 + index,
+        price: Math.round(500 + Math.random() * 1000),
         brandId: "613511bba937c621233341c8",
         createdAt: "2011-08-04T11:55:16.887Z",
         coverPhoto: "",
