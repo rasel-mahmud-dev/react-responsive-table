@@ -136,30 +136,13 @@ const Table: FC<TableProps> = (props) => {
                     pages.push(pageNumber + i);
                 }
 
-                // if click backward page number
+                // if click first backward page number
             } else if (prevState.currentPage > pageNumber && pageNumber > 0) {
                 pages = getNegativePages(pageNumber);
+            } else {
+                // if click between edge page number
+                pages = getForwardPage([], prevState.pageSize, pageNumber);
             }
-
-            // console.log(prevState.currentPage > pageNumber);
-
-            // if click each 10 pair ? 10, 20, 30, 40, 50...
-            // if (isZero === 0) {
-            //     // if click last page
-            //     if (allPages.length === pageNumber) {
-            //         pages = getNegativePages(pageNumber);
-            //     } else {
-            //         pages = [];
-            //         pages.push(pageNumber - 1);
-            //         for (let i = 0; i <= 10; i++) {
-            //             pages.push(pageNumber + i);
-            //         }
-            //         pages.push(allPages.length);
-            //     }
-            //     // of click blew than current page number
-            // } else if (prevState.currentPage > pageNumber && pageNumber > 0) {
-            //     pages = getNegativePages(prevState.currentPage);
-            // }
 
             return {
                 ...prevState,
@@ -171,13 +154,19 @@ const Table: FC<TableProps> = (props) => {
     }
 
     function getForwardPage(items: any, pageSize: number, currentPage: number) {
-        let allPage: number[] = [];
-        let pages = items.slice(0, items.length / pageSize);
-        for (let i = 0; i < 10; i++) {
-            allPage.push(i + 1);
+        let pages: number[] = [];
+        // let pages = items.slice(0, items.length / pageSize);
+
+        if (currentPage < 10) {
+            for (let i = 1; i <= 10; i++) {
+                pages.push(i);
+            }
+        } else {
+            for (let i = 0; i < 10; i++) {
+                pages.push(currentPage + i);
+            }
         }
-        // allPage.push(pages.length);
-        return allPage;
+        return pages;
     }
 
     function getNegativePages(n: number) {
