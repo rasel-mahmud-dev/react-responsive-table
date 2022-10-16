@@ -26,18 +26,9 @@ interface TableProps extends HTMLAttributes<HTMLTableElement> {
 }
 
 const Table: FC<TableProps> = (props) => {
-    const {
-        theadClass,
-        tbodyClass,
-        className,
-        dataSource,
-        columns,
-        fixed,
-        scroll,
-        pagination = { pageSize: 100, currentPage: 1 },
-    } = props;
+    const { theadClass, tbodyClass, className, dataSource, columns, fixed, scroll, pagination } = props;
 
-    let fixedTable = { maxHeight: 0, minWidth: 0 };
+    let fixedTable = { maxHeight: 500, minWidth: 0 };
 
     const [state, setState] = useState({
         items: [],
@@ -50,7 +41,7 @@ const Table: FC<TableProps> = (props) => {
     });
 
     function initialDataSetup() {
-        setState((prevState) => {
+        setState((prevState: any) => {
             let list = dataSource;
             let pages: any = [];
             if (pagination) {
@@ -70,8 +61,8 @@ const Table: FC<TableProps> = (props) => {
                 paginatedItems: list,
                 order: 1,
                 pages: pages,
-                currentPage: pagination.currentPage,
-                pageSize: pagination.pageSize,
+                currentPage: pagination?.currentPage,
+                pageSize: pagination?.pageSize,
             };
         });
     }
@@ -82,7 +73,7 @@ const Table: FC<TableProps> = (props) => {
 
     useEffect(() => {
         initialDataSetup();
-    }, [pagination.pageSize]);
+    }, [pagination && pagination.pageSize]);
 
     if (scroll && scroll.y) {
         fixedTable.maxHeight = scroll.y;
@@ -99,8 +90,10 @@ const Table: FC<TableProps> = (props) => {
             list = list.sort((a: any, b: any) => compareFn(b[column.dataIndex], a[column.dataIndex]));
         }
 
-        let paginatedItems = sliceForPaginate(state, state.items);
-
+        let paginatedItems: any = [];
+        if (pagination) {
+            paginatedItems = sliceForPaginate(state, state.items);
+        }
         setState((prevState) => ({
             ...prevState,
             items: list,
@@ -214,18 +207,20 @@ const Table: FC<TableProps> = (props) => {
                 </table>
             </div>
 
-            <div className="flex items-center flex-wrap mt-5 justify-end ">
-                {state.pages.map((pageNumber) => (
-                    <div
-                        className={`bg-gray-100 rounded-full font-medium m-2 w-10 h-10 flex justify-center text-center items-center cursor-pointer ${
-                            state.currentPage === pageNumber ? "!bg-amber-400" : ""
-                        }`}
-                        onClick={() => handleSelectPage(pageNumber)}
-                    >
-                        <button>{pageNumber}</button>
-                    </div>
-                ))}
-            </div>
+            {pagination && (
+                <div className="pagination">
+                    {state.pages.map((pageNumber) => (
+                        <div
+                            className={`pagination-item ${
+                                state.currentPage === pageNumber ? "pagination-item-active" : ""
+                            }`}
+                            onClick={() => handleSelectPage(pageNumber)}
+                        >
+                            <button>{pageNumber}</button>
+                        </div>
+                    ))}
+                </div>
+            )}
         </div>
     );
 };

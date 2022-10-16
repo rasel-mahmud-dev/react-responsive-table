@@ -84,7 +84,6 @@ function App() {
                         dataSource={data ? data : []}
                         scroll={{ x: 800, y: 450 }}
                         columns={columns}
-                        pagination={{ pageSize: state.pageSize, currentPage: 1 }}
                     />
                 </div>
             </div>

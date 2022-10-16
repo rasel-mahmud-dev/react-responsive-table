@@ -29,11 +29,7 @@ const SS = (props: { order: number; className?: string; onClick: any }) => (
     </svg>
 );
 
-const SortIcon = (props: {
-    order: number;
-    className?: string;
-    onClick: any;
-}) => (
+const SortIcon = (props: { order: number; className?: string; onClick: any }) => (
     <svg
         className={`${props.className}`}
         onClick={props.onClick}
@@ -55,55 +51,33 @@ const SortIcon = (props: {
 );
 
 const Thead: FC<Props> = (props) => {
-    const {
-        columns,
-        theadClass = { th: "", thead: "", tr: "" },
-        onSort,
-        order = 0,
-        sortedField,
-    } = props;
+    const { columns, theadClass = { th: "", thead: "", tr: "" }, onSort, order = 0, sortedField } = props;
 
     return (
         <thead className={theadClass.thead}>
             <tr className={theadClass.tr}>
                 {columns?.map((column: Column) => (
                     <th
-                        className={`${
-                            column.className ? column.className : ""
-                        } ${theadClass.th}`}
+                        className={`${column.className ? column.className : ""} ${theadClass.th}`}
                         style={{ width: column.colWidth }}
                     >
                         <div className="thead-item">
                             {column.sorter &&
                                 (sortedField === column.dataIndex ? (
                                     <SortIcon
-                                        className="mr-1"
-                                        onClick={() =>
-                                            onSort
-                                                ? onSort(column.sorter, column)
-                                                : {}
-                                        }
+                                        className="sort-icon"
+                                        onClick={() => (onSort ? onSort(column.sorter, column) : {})}
                                         order={order}
                                     />
                                 ) : (
                                     <SS
-                                        className="mr-1"
-                                        onClick={() =>
-                                            onSort
-                                                ? onSort(column.sorter, column)
-                                                : {}
-                                        }
+                                        className="sort-icon"
+                                        onClick={() => (onSort ? onSort(column.sorter, column) : {})}
                                         order={order}
                                     />
                                 ))}
 
-                            <span
-                                onClick={() =>
-                                    onSort ? onSort(column.sorter, column) : {}
-                                }
-                            >
-                                {column.title}
-                            </span>
+                            <span onClick={() => (onSort ? onSort(column.sorter, column) : {})}>{column.title}</span>
                         </div>
                     </th>
                 ))}
